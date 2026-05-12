@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" width="1024" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="60%" stop-color="#FFC857"/>
+      <stop offset="100%" stop-color="#7FB069"/>
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF4E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+
+  <!-- Decorative dots -->
+  <circle cx="100" cy="100" r="40" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="940" cy="400" r="60" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="80" cy="380" r="22" fill="rgba(255,255,255,0.18)"/>
+
+  <!-- App icon -->
+  <g transform="translate(140 250)">
+    <rect x="-80" y="-80" width="160" height="160" rx="38" ry="38" fill="url(#iconBg)"/>
+    <text x="0" y="38" font-family="-apple-system, sans-serif" font-size="110"
+          text-anchor="middle">🏡</text>
+  </g>
+
+  <!-- Title block -->
+  <text x="280" y="200" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="64"
+        font-weight="700" fill="#FFFFFF">悦家库存 HomeStock</text>
+  <text x="280" y="260" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="32"
+        font-weight="500" fill="rgba(255,255,255,0.95)">家庭物资效期与库存管理系统</text>
+
+  <!-- Feature pills -->
+  <g transform="translate(280 310)" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="22" fill="#2D2A26">
+    <g>
+      <rect x="0" y="0" width="160" height="48" rx="24" ry="24" fill="rgba(255,255,255,0.92)"/>
+      <text x="80" y="32" text-anchor="middle">📅 临期预警</text>
+    </g>
+    <g transform="translate(180 0)">
+      <rect x="0" y="0" width="160" height="48" rx="24" ry="24" fill="rgba(255,255,255,0.92)"/>
+      <text x="80" y="32" text-anchor="middle">🛒 智能补货</text>
+    </g>
+    <g transform="translate(360 0)">
+      <rect x="0" y="0" width="200" height="48" rx="24" ry="24" fill="rgba(255,255,255,0.92)"/>
+      <text x="100" y="32" text-anchor="middle">🔒 全本地存储</text>
+    </g>
+  </g>
+</svg>

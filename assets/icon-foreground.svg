@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FFC857"/>
+    </linearGradient>
+    <linearGradient id="house" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF4E6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="220" ry="220" fill="url(#bg)"/>
+
+  <!-- Roof -->
+  <g filter="url(#shadow)">
+    <path d="M 248 540 L 512 296 L 776 540 L 776 800 Q 776 808 768 808 L 256 808 Q 248 808 248 800 Z"
+          fill="url(#house)"/>
+    <!-- Chimney -->
+    <rect x="640" y="380" width="48" height="92" fill="url(#house)"/>
+  </g>
+
+  <!-- Door -->
+  <rect x="472" y="620" width="80" height="172" rx="40" ry="40" fill="#FF6B35"/>
+  <circle cx="540" cy="710" r="6" fill="#FFC857"/>
+
+  <!-- Window -->
+  <rect x="320" y="620" width="100" height="100" rx="14" ry="14" fill="#7FB069"/>
+  <line x1="370" y1="620" x2="370" y2="720" stroke="#FFF4E6" stroke-width="8"/>
+  <line x1="320" y1="670" x2="420" y2="670" stroke="#FFF4E6" stroke-width="8"/>
+
+  <rect x="612" y="620" width="100" height="100" rx="14" ry="14" fill="#3D7EC9"/>
+  <line x1="662" y1="620" x2="662" y2="720" stroke="#FFF4E6" stroke-width="8"/>
+  <line x1="612" y1="670" x2="712" y2="670" stroke="#FFF4E6" stroke-width="8"/>
+
+  <!-- Inventory dots on roof to signal "stock" -->
+  <circle cx="430" cy="450" r="14" fill="#FFC857"/>
+  <circle cx="512" cy="420" r="16" fill="#7FB069"/>
+  <circle cx="594" cy="450" r="14" fill="#E54B4B"/>
+</svg>
