@@ -1,0 +1,51 @@
+{
+  "name": "homestock",
+  "version": "1.0.0",
+  "description": "悦家库存：家庭物资效期与库存管理系统",
+  "author": "柴琳",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "lint": "eslint \"src/**/*.{js,vue}\" \"tests/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.{js,vue}\" \"tests/**/*.js\" --fix",
+    "format": "prettier --write \"src/**/*.{js,vue,css}\" \"tests/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.{js,vue,css}\" \"tests/**/*.js\"",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build:debug": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "android:build:release": "npm run android:sync && cd android && ./gradlew bundleRelease"
+  },
+  "dependencies": {
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.5",
+    "pinia": "^2.2.4",
+    "echarts": "^5.5.1",
+    "idb": "^8.0.0",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.4.38",
+    "@vue/test-utils": "^2.4.6",
+    "@vitest/coverage-v8": "^2.1.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2",
+    "jsdom": "^25.0.1",
+    "fake-indexeddb": "^6.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
