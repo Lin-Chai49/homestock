@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"homestock-preview","runtimeExecutable":"npx","runtimeArgs":["vite","preview","--port","5188"],"port":5188}]}

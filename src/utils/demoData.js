@@ -315,7 +315,6 @@ const DEMO_ITEMS = [
 ];
 
 function buildConsumptions() {
-  const records = [];
   // Last 30 days, ~50 records spread across items
   const milkConsumption = Array.from({ length: 14 }, (_, i) => ({
     itemId: null,
