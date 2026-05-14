@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <title>悦家库存 HomeStock — 隐私政策</title>
+    <style>
+      :root {
+        --primary: #ff6b35;
+        --bg: #fff8ee;
+        --surface: #fff;
+        --text: #2d2a26;
+        --muted: #6b6660;
+        --border: rgba(45, 42, 38, 0.1);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .header {
+        background: linear-gradient(135deg, #ff6b35, #ffc857);
+        color: #fff;
+        padding: 48px 24px;
+        text-align: center;
+      }
+      .header h1 { margin: 0 0 8px; font-size: 28px; }
+      .header p { margin: 0; opacity: 0.9; font-size: 14px; }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 24px 80px;
+      }
+      .card {
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      }
+      h2 {
+        font-size: 20px;
+        margin: 0 0 12px;
+        color: var(--primary);
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 8px;
+      }
+      h3 { font-size: 16px; margin: 16px 0 8px; }
+      p { margin: 8px 0; }
+      ul { padding-left: 22px; }
+      li { margin: 4px 0; }
+      .check { color: #5a8c3f; font-weight: 700; }
+      .cross { color: #c4453d; font-weight: 700; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 14px;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      th { background: rgba(255, 107, 53, 0.06); }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        padding: 24px;
+      }
+      code {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+      .lang-divider {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: var(--muted);
+        font-size: 14px;
+        position: relative;
+      }
+      .lang-divider::before, .lang-divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        height: 1px;
+        background: var(--border);
+      }
+      .lang-divider::before { left: 0; }
+      .lang-divider::after { right: 0; }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>🏡 悦家库存 HomeStock</h1>
+      <p>隐私政策 · Privacy Policy · Version 1.0 · Effective 2026-05-13</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>核心承诺</h2>
+        <p>悦家库存是一款<strong>完全本地化、零数据采集</strong>的家庭物资管理应用。我们郑重承诺：</p>
+        <ul>
+          <li><span class="cross">✗</span> <strong>不收集</strong>任何个人信息（姓名、手机号、邮箱、地理位置、设备 ID、广告 ID 等）</li>
+          <li><span class="cross">✗</span> <strong>不上传</strong>任何用户数据到任何服务器（无云端，无远程 API 调用）</li>
+          <li><span class="cross">✗</span> <strong>不嵌入</strong>任何第三方 SDK（无广告、统计、推送、社交分享）</li>
+          <li><span class="cross">✗</span> <strong>不读取</strong>通讯录、相册、短信、通话记录、其他应用数据</li>
+          <li><span class="cross">✗</span> <strong>不申请</strong>摄像头、麦克风、定位、电话、存储等敏感权限</li>
+          <li><span class="check">✓</span> <strong>所有数据</strong>保存在用户设备的浏览器原生 IndexedDB 中，仅本应用进程可访问</li>
+          <li><span class="check">✓</span> <strong>数据导入导出</strong>完全由用户通过应用内"JSON 备份"功能手动控制</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>1. 数据收集说明</h2>
+        <p>本应用 <strong>不收集</strong> 任何形式的个人信息或行为数据。用户在本应用中输入的所有内容（物品名称、品牌、规格、数量、价格、备注、消耗记录、购物清单等）：</p>
+        <ul>
+          <li>仅保存在用户设备本地的 IndexedDB 数据库（名为 <code>HomeStockDB</code>）中</li>
+          <li>永远不会通过网络传输到任何服务器或第三方</li>
+          <li>仅在用户主动导出 JSON 备份时才会离开本应用沙箱（由用户选择保存位置）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2. 应用权限</h2>
+        <p>本应用仅声明 1 项 Android 权限：</p>
+        <table>
+          <tr><th>权限</th><th>用途</th><th>实际网络请求</th></tr>
+          <tr>
+            <td><code>android.permission.INTERNET</code></td>
+            <td>Android WebView 加载本地打包的静态资源（HTML/CSS/JS/图片）所必需</td>
+            <td><strong>无</strong> — 应用运行时不发起任何 HTTP 请求</td>
+          </tr>
+        </table>
+        <p>本应用<strong>明确不申请</strong>：相机、麦克风、定位、电话、短信、通讯录、外部存储读写、剪贴板、生物识别等所有敏感权限。</p>
+        <p><code>AndroidManifest.xml</code> 同时声明：</p>
+        <ul>
+          <li><code>android:allowBackup="false"</code> — 禁止系统自动云备份</li>
+          <li><code>android:usesCleartextTraffic="false"</code> — 禁止明文网络</li>
+          <li>自定义 <code>dataExtractionRules</code> — 排除所有云备份与设备迁移</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. 第三方组件</h2>
+        <p>本应用使用以下开源前端库，<strong>全部以静态打包形式集成，不与第三方服务器通信</strong>：</p>
+        <table>
+          <tr><th>组件</th><th>用途</th><th>许可证</th><th>网络通信</th></tr>
+          <tr><td>Vue 3</td><td>UI 框架</td><td>MIT</td><td>无</td></tr>
+          <tr><td>Vue Router</td><td>路由</td><td>MIT</td><td>无</td></tr>
+          <tr><td>Pinia</td><td>状态管理</td><td>MIT</td><td>无</td></tr>
+          <tr><td>idb</td><td>IndexedDB 封装</td><td>ISC</td><td>无</td></tr>
+          <tr><td>ECharts</td><td>数据可视化</td><td>Apache 2.0</td><td>无</td></tr>
+          <tr><td>dayjs</td><td>日期处理</td><td>MIT</td><td>无</td></tr>
+          <tr><td>Capacitor 6</td><td>Android 容器</td><td>MIT</td><td>无</td></tr>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>4. 儿童隐私</h2>
+        <p>本应用面向普通家庭用户，无年龄分级限制。由于不收集任何个人信息，不存在专门针对儿童的数据采集行为。家长可放心让儿童在监督下使用。</p>
+      </section>
+
+      <section class="card">
+        <h2>5. 数据安全</h2>
+        <p>由于所有数据保存在用户设备本地：</p>
+        <ul>
+          <li>数据安全依赖于用户设备本身的安全（屏幕锁定、设备加密等）</li>
+          <li>卸载应用会清除所有数据，建议用户在卸载前通过"设置 → 数据管理 → 导出 JSON"进行备份</li>
+          <li>我们建议用户为设备启用屏幕锁定与系统级加密</li>
+          <li>v1.0 不支持备份文件加密；v1.1 将提供 AES-256 加密备份选项</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>6. 政策变更</h2>
+        <p>本政策的任何变更将通过下列方式提前告知用户：</p>
+        <ol>
+          <li>应用内更新日志（设置 → 关于）</li>
+          <li>项目主页</li>
+          <li>Play Store 应用页面</li>
+        </ol>
+        <p>重大变更将通过应用启动后的提示确认告知。</p>
+      </section>
+
+      <section class="card">
+        <h2>7. 联系方式</h2>
+        <p>如对本政策有任何疑问，请通过以下方式联系著作权人柴琳：</p>
+        <ul>
+          <li>应用问题反馈：通过 Google Play Store 应用页面"提供反馈"功能</li>
+        </ul>
+      </section>
+
+      <div class="lang-divider">English Summary</div>
+
+      <section class="card">
+        <h2>English Summary (for Google Play Console)</h2>
+        <p><strong>Yuejia HomeStock</strong> is a fully local, zero-data-collection household inventory app.</p>
+        <ul>
+          <li>We <strong>do not collect</strong> any personal information whatsoever.</li>
+          <li>We <strong>do not upload</strong> any user data to any server.</li>
+          <li>We <strong>do not embed</strong> any third-party SDK (no ads, analytics, push notifications, social sharing).</li>
+          <li>The only Android permission requested is <code>INTERNET</code>, required by the Android WebView to load locally bundled static resources; <strong>the app makes no runtime network requests</strong>.</li>
+          <li>All user-entered data (items, expiry dates, prices, consumption records, shopping lists) is stored exclusively in the device's local IndexedDB, accessible only to this app.</li>
+          <li>Users can manually export / import their data as JSON via the in-app Settings page.</li>
+          <li>Children's privacy is fully respected because no personal data of any kind is collected.</li>
+        </ul>
+        <p>This privacy policy was last updated on <strong>2026-05-13</strong>.</p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 柴琳 · MIT License · 悦家库存 HomeStock v1.0
+    </footer>
+  </body>
+</html>
