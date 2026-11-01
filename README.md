@@ -34,7 +34,7 @@
 ### 环境要求
 - Node.js 18+
 - npm 9+
-- (Android 构建) JDK 17+ 与 Android SDK 34
+- (Android 构建) JDK 17+ 与 Android SDK 35
 
 ### 开发
 
@@ -128,7 +128,7 @@ IndexedDB `HomeStockDB` v1 含 6 个对象存储：
 
 - **临期判定** (`src/services/dateService.js`): 5 级分类（紧急 ≤2 天 / 临期 3-7 天 / 关注 8-30 天 / 新鲜 >30 天 / 已过期）
 - **库存预测** (`src/services/algorithmService.js`): 取近 30 天消耗记录求日均，预测耗尽天数
-- **自动补货**: `daysToEmpty < 7` OR `currentQty <= minStock` 自动加入购物清单，按 7 种商超路由
+- **自动补货**: 在购物清单页点「同步自动补货」后，`daysToEmpty < 7` 或 `currentQty <= minStock` 时写入购物清单。建议去处是四个固定店名，不是联网查询
 - **浪费分析**: 启发式分类（遗忘 / 购买过多 / 口味变化）
 
 ## 🎨 主题系统
@@ -145,7 +145,7 @@ IndexedDB `HomeStockDB` v1 含 6 个对象存储：
 - 自定义 `dataExtractionRules` 排除云备份与设备迁移
 - 用户数据通过应用内"导出 JSON"手动备份
 
-详见 [docs/PRIVACY_POLICY.md](docs/PRIVACY_POLICY.md)。
+线上政策页：<https://lin-chai49.github.io/homestock-privacy/>。仓库里的 [docs/PRIVACY_POLICY.md](docs/PRIVACY_POLICY.md) 只指向这一页。
 
 ## 📜 Scripts
 
@@ -173,7 +173,7 @@ IndexedDB `HomeStockDB` v1 含 6 个对象存储：
 1. 注册 Google Play Console 账号（$25）
 2. 生成签名 keystore：`keytool -genkeypair ...`（见上架指南）
 3. 配置 `keystore.properties`
-4. 部署隐私政策 URL（GitHub Pages 即可）
+4. 隐私政策 URL 使用已发布的 <https://lin-chai49.github.io/homestock-privacy/>
 5. 构建 release AAB：`npm run android:build:release`
 6. 上传到 Play Console，提交审核
 
